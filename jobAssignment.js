@@ -3,7 +3,7 @@
 // Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
 
-const index = () => {
+const index = (target) => {
     const  nums = [2,7,11,15];
     
          for (let i = 0; i < nums.length; i++) {
@@ -11,7 +11,7 @@ const index = () => {
               for (let m = 0; m < nums.length; m++) {
                 const anotherIndex = nums[m];
                 const indexNumber = element + anotherIndex;
-                    if (indexNumber == 9) {
+                    if (indexNumber == target) {
                         const arrayIndex = [nums.indexOf(element), nums.indexOf(anotherIndex)] 
                         return arrayIndex;
                     }    
@@ -21,4 +21,19 @@ const index = () => {
         
     }
     
-    index();
+    index(9);
+
+    const  nums = [2,7,11,15];
+
+    const findingIndexByMap = () =>{ 
+        nums.map( index => {
+        for (let i = 0; i < nums.length; i++) {
+            const element = nums[i];
+            const anotherNumber = index + element;
+            if (anotherNumber == 9) {
+                const arrayIndex = [nums.indexOf(index), nums.indexOf(element)];
+                return arrayIndex;
+            }
+        }
+    })
+}
