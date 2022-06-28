@@ -8,20 +8,31 @@ const index = (target) => {
     
          for (let i = 0; i < nums.length; i++) {
               const element = nums[i];
-              for (let m = 0; m < nums.length; m++) {
-                const anotherIndex = nums[m];
-                const indexNumber = element + anotherIndex;
-                    if (indexNumber == target) {
-                        const arrayIndex = [nums.indexOf(element), nums.indexOf(anotherIndex)] 
-                        return arrayIndex;
-                    }    
+              if(element == target){
+                const arrayIndex =  [nums.indexOf(element)];
+                return arrayIndex;
+              }
+              else{
+                for (let m = 0; m < nums.length; m++) {
+                    const anotherIndex = nums[m];
+                    const indexNumber = element + anotherIndex;
+                        if (indexNumber == target) {
+                            const arrayIndex = [nums.indexOf(element), nums.indexOf(anotherIndex)] 
+                            return arrayIndex;
+                        }    
+                  }
               }
                            
          }
         
     }
+
+
     
     index(9);
+
+
+
 
     const  nums = [2,7,11,15];
 
