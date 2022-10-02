@@ -4,6 +4,7 @@
 // *Print the result as alert! (example: "Fahrenheit: 94 Degree")
 // *Print "Task Complete" in console.
 
+
 let celcius = prompt("Please enter the Celcius number");
 
 const fahrenheit = 9/5 * celcius + 32;
